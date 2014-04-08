@@ -7886,7 +7886,10 @@ Axis.prototype = {
 			axisOffset[side],
 			axis.axisTitleMargin + titleOffset + directionFactor * axis.offset
 		);
-		clipOffset[invertedSide] = mathMax(clipOffset[invertedSide], mathFloor(options.lineWidth / 2) * 2);
+		clipOffset[invertedSide] = mathMax(
+            		clipOffset[invertedSide],
+            		mathFloor((options.lineWidth) / 2 - axis.offset) * 2
+		);
 	},
 
 	/**
