@@ -434,6 +434,7 @@ Series.prototype = {
 							series.requireSorting = false;
 							nameX = inArray(pt.name, names); // #2522
 							if (nameX === -1 || !pt.autoX) {
+							    pt.x = names.length;
 								names[pt.x] = pt.name; // #2046
 							} else {
 								pt.x = nameX;
