@@ -1328,7 +1328,9 @@ Series.prototype = {
 
 			} else if (lineWidth && graphPath.length) { // #1487
 				attribs = {
-					stroke: prop[1],
+				    stroke: prop[1],
+				    'stroke-linejoin': 'round',
+				    'stroke-linecap': 'round',
 					'stroke-width': lineWidth,
 					fill: NONE,
 					zIndex: 1 // #1069
