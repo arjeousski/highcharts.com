@@ -3037,7 +3037,7 @@ SVGRenderer.prototype = {
 								}
 
 								tooLong = actualWidth > width;
-								if (!tooLong || (spanNo === 0 && words.length === 1) || (spanNo !== 0 && words.length === 0)) { // new line needed
+								if (!tooLong || words.length === 1) { // new line needed
 									words = rest;
 									rest = [];
 									if (words.length) {
